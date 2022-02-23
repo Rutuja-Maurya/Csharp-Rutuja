@@ -1,0 +1,710 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil Consolas;}{\f2\fnil\fcharset0 Consolas;}}
+{\colortbl ;\red0\green0\blue255;\red0\green0\blue0;\red43\green145\blue175;\red163\green21\blue21;\red0\green128\blue0;\red128\green0\blue0;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\b\f0\fs28\lang9 C#\par
+// Hello World using C#\par
+\b0\fs22\par
+\cf1\f1\fs24 using\cf2  System;\par
+\par
+\cf1 namespace\cf2  ConsoleApp1\par
+\{\par
+    \cf1 class\cf2  \cf3 Program\cf2\par
+    \{\par
+        \cf1 static\cf2  \cf1 void\cf2  Main(\cf1 string\cf2 [] args)\par
+        \{\par
+            Console.WriteLine(\cf4 "Hello World!"\cf2 );\par
+        \}\par
+    \}\par
+\}\par
+\cf0\f0\fs22\par
+\par
+\par
+\b\par
+\fs28 //Data Types and Variables (variable declaration and initialization)\par
+Value Data Types, Reference Data Types, Pointer Data Type\par
+\b0\fs22\par
+\b\fs24 Value Data Types\par
+\b0\fs22\par
+\cf1\f1\fs24 using\cf2  System;\par
+\cf1 namespace\cf2  ValueTypeTest\par
+\{\par
+    \cf1 class\cf2  \cf3 DataTypes\cf2\par
+    \{\par
+        \cf1 static\cf2  \cf1 void\cf2  Main()\par
+        \{\par
+\par
+            \cf1 char\cf2  a = \cf4 'G'\cf2 ;\par
+\par
+            \cf1 int\cf2  i = 20;\par
+\par
+            \cf1 short\cf2  s = 56;\par
+\par
+            \cf1 long\cf2  l = 4564;\par
+\par
+            \cf1 uint\cf2  ui = 95;\par
+\par
+            \cf1 ushort\cf2  us = 76;\par
+\par
+            \cf1 ulong\cf2  ul = 3624573;\par
+\par
+            \cf1 double\cf2  d = 8.358674532;\par
+\par
+            \cf1 float\cf2  f = 3.7330645f;\par
+\par
+            \cf1 decimal\cf2  dec = 389.5m;\par
+\par
+\par
+            Console.WriteLine(\cf4 "char: "\cf2  + a);\par
+            Console.WriteLine(\cf4 "integer: "\cf2  + i);\par
+            Console.WriteLine(\cf4 "short: "\cf2  + s);\par
+            Console.WriteLine(\cf4 "long: "\cf2  + l);\par
+            Console.WriteLine(\cf4 "float: "\cf2  + f);\par
+            Console.WriteLine(\cf4 "double: "\cf2  + d);\par
+            Console.WriteLine(\cf4 "decimal: "\cf2  + dec);\par
+            Console.WriteLine(\cf4 "Unsinged integer: "\cf2  + ui);\par
+            Console.WriteLine(\cf4 "Unsinged short: "\cf2  + us);\par
+            Console.WriteLine(\cf4 "Unsinged long: "\cf2  + ul);\par
+\par
+        \}\par
+    \}\par
+\}\par
+\fs19\par
+\fs24\par
+\cf0\b\f0\fs28 Reference Data Types\par
+\cf2\b0\f1\fs19\par
+\cf1\fs24 using\cf2  System;\par
+\cf1 namespace\cf2  ValueTypeTest\par
+\{\par
+\par
+    \cf1 class\cf2  \cf3 ReferenceData\cf2\par
+    \{\par
+\par
+        \cf5 // Main Function\cf2\par
+        \cf1 static\cf2  \cf1 void\cf2  Main()\par
+        \{\par
+\par
+            \cf1 string\cf2  a = \cf4 "Reference"\cf2 ;\par
+\par
+            a += \cf4 "Data"\cf2 ;\par
+            a = a + \cf4 "Type"\cf2 ;\par
+            Console.WriteLine(a);\par
+\par
+            \cf1 object\cf2  obj;\par
+            obj = 30;\par
+            Console.WriteLine(obj);\par
+\par
+\par
+            Console.WriteLine(obj.GetType());\par
+        \}\par
+    \}\par
+\}\par
+\par
+\cf0\f0\par
+\fs22\par
+\b\fs28 Pointer Data Type\par
+\b0\fs22\par
+\cf1\f1\fs24 using\cf2  System;\par
+\cf1 namespace\cf2  Pointerprogram\par
+\{\par
+\par
+    \cf1 class\cf2  \cf3 PointerType\cf2\par
+    \{\par
+\par
+        \cf1 static\cf2  \cf1 void\cf2  Main()\par
+        \{\par
+            \cf1 unsafe\cf2\par
+            \{\par
+\par
+                \cf1 int\cf2  n = 10;\par
+\par
+                \cf1 int\cf2 * p = &n;\par
+                Console.WriteLine(\cf4 "Value :\{0\}"\cf2 , n);\par
+                Console.WriteLine(\cf4 "Address :\{0\}"\cf2 , (\cf1 int\cf2 )p);\par
+            \}\par
+        \}\par
+    \}\par
+\}\par
+\cf0\f0\par
+\par
+\fs28\par
+\b // Literals\par
+Integer Literals, Floating-point Literals, Character Literals, String Literals\par
+\b0\fs22\par
+\cf1\f1\fs24 using\cf2  System;\par
+\par
+\cf1 class\cf2  \cf3 Literals\cf2\par
+\{\par
+\f2\lang1033\tab\cf1\f1\lang9 public\cf2  \cf1 static\cf2  \cf1 void\cf2  Main(String[] args)\par
+    \{\par
+\par
+       \par
+        \cf1 int\cf2  a = 101;\par
+        \cf1 int\cf2  b = 0145;\par
+        \cf1 int\cf2  c = 0xFace;\par
+        \cf1 int\cf2  x = 0b101;\par
+        \cf1 double\cf2  d = 101.230;\par
+        \cf1 char\cf2  ch = \cf4 'a'\cf2 ;\par
+        String s = \cf6 @"Hello World!"\cf2 ;\par
+\par
+\par
+\par
+        Console.WriteLine(a);\par
+        Console.WriteLine(b);\par
+        Console.WriteLine(c);\par
+        Console.WriteLine(x);\par
+        Console.WriteLine(d);\par
+        Console.WriteLine(ch);\par
+        Console.WriteLine(s);\par
+\par
+\par
+    \}\par
+\}\par
+\par
+\fs19     \par
+    \cf0\f0\fs22\par
+\b\fs28 //Arithmetic Operators\par
+Addition, Substraction, Multiplication, Division, Modulo.\par
+\fs22\par
+\cf1\b0\f1\fs24 using\cf2  System;\par
+\cf1 namespace\cf2  Operators\par
+\{\par
+    \cf1 class\cf2  \cf3 Arithmetic\cf2\par
+    \{\par
+\par
+                \cf1 static\cf2  \cf1 void\cf2  Main(\cf1 string\cf2 [] args)\par
+        \{\par
+\par
+            \cf1 int\cf2  result;\par
+            \cf1 int\cf2  x = 10, y = 5;\par
+\par
+                        result = (x + y);\par
+            Console.WriteLine(\cf4 "Addition: "\cf2  + result);\par
+\par
+            \par
+            result = (x - y);\par
+            Console.WriteLine(\cf4 "Subtraction: "\cf2  + result);\par
+\par
+            result = (x * y);\par
+            Console.WriteLine(\cf4 "Multiplication: "\cf2  + result);\par
+\par
+                        result = (x / y);\par
+            Console.WriteLine(\cf4 "Division: "\cf2  + result);\par
+\par
+            \par
+            result = (x % y);\par
+            Console.WriteLine(\cf4 "Modulo: "\cf2  + result);\par
+        \}\par
+    \}\par
+\}\cf0\b\f0\par
+\cf2\b0\f1\par
+\b\par
+\f2\fs28\lang1033 //\f1\lang9 Relational Operators\par
+\f2\lang1033 ==, !=, >, <, >=, <=\par
+\b0\fs19\par
+\cf1\f1\fs24 using\cf2  System;\par
+\cf1 namespace\cf2  Operators\par
+\{\par
+\par
+    \cf1 class\cf2  \cf3 Relational\cf2\par
+    \{\par
+        \cf1 static\cf2  \cf1 void\cf2  Main(\cf1 string\cf2 [] args)\par
+        \{\par
+            \cf1 bool\cf2  result;\par
+            \cf1 int\cf2  x = 5, y = 10;\par
+\par
+            \par
+            result = (x == y);\par
+            Console.WriteLine(\cf4 "Equal to Operator: "\cf2  + result);\par
+\par
+            \par
+            result = (x > y);\par
+            Console.WriteLine(\cf4 "Greater than Operator: "\cf2  + result);\par
+\par
+            \par
+            result = (x < y);\par
+            Console.WriteLine(\cf4 "Less than Operator: "\cf2  + result);\par
+\par
+            \par
+            result = (x >= y);\par
+            Console.WriteLine(\cf4 "Greater than or Equal to: "\cf2  + result);\par
+\par
+            \par
+            result = (x <= y);\par
+            Console.WriteLine(\cf4 "Lesser than or Equal to: "\cf2  + result);\par
+\par
+            \par
+            result = (x != y);\par
+            Console.WriteLine(\cf4 "Not Equal to Operator: "\cf2  + result);\par
+        \}\par
+    \}\par
+\}\par
+\par
+\par
+\f2\lang9\par
+\b\fs28\lang1033 //Logical operator\par
+&&, ||, !\par
+\cf1\b0\f1\fs19\par
+\fs24 using\cf2  System;\par
+\cf1 namespace\cf2  Operators\par
+\{\par
+\par
+    \cf1 class\cf2  \cf3 Logical\cf2\par
+    \{\par
+        \cf1 static\cf2  \cf1 void\cf2  Main(\cf1 string\cf2 [] args)\par
+        \{\par
+            \cf1 bool\cf2  a = \cf1 true\cf2 , b = \cf1 false\cf2 , result;\par
+\par
+\par
+            result = a && b;\par
+            Console.WriteLine(\cf4 "AND Operator: "\cf2  + result);\par
+\par
+\par
+            result = a || b;\par
+            Console.WriteLine(\cf4 "OR Operator: "\cf2  + result);\par
+\par
+\par
+            result = !a;\par
+            Console.WriteLine(\cf4 "NOT Operator: "\cf2  + result);\par
+\par
+        \}\par
+    \}\par
+\}\par
+\par
+\fs19\par
+\b\f2\fs28 //\f1 Bitwise Operators\par
+& (bitwise AND)\f2 , \f1  | (bitwise OR)\f2 ,  \f1 ^ (bitwise XOR)\f2 , \f1  << (left shift)\f2 , \f1  >> (right shift)\fs19\par
+\b0\par
+\cf1\fs24 using\cf2  System;\par
+\cf1 namespace\cf2  Opeartors\par
+\{\par
+\par
+    \cf1 class\cf2  \cf3 Bitwise\cf2\par
+    \{\par
+        \cf1 static\cf2  \cf1 void\cf2  Main(\cf1 string\cf2 [] args)\par
+        \{\par
+            \cf1 int\cf2  x = 5, y = 10, result;\par
+\par
+\par
+            result = x & y;\par
+            Console.WriteLine(\cf4 "Bitwise AND: "\cf2  + result);\par
+\par
+\par
+            result = x | y;\par
+            Console.WriteLine(\cf4 "Bitwise OR: "\cf2  + result);\par
+\par
+\par
+            result = x ^ y;\par
+            Console.WriteLine(\cf4 "Bitwise XOR: "\cf2  + result);\par
+\par
+\par
+            result = ~x;\par
+            Console.WriteLine(\cf4 "Bitwise Complement: "\cf2  + result);\par
+\par
+\par
+            result = x << 2;\par
+            Console.WriteLine(\cf4 "Bitwise Left Shift: "\cf2  + result);\par
+\par
+\par
+            result = x >> 2;\par
+            Console.WriteLine(\cf4 "Bitwise Right Shift: "\cf2  + result);\par
+\par
+        \}\par
+    \}\par
+\}\par
+\fs19\par
+\fs28\par
+\b\f2 //Assignment Opeartor\f1\par
+\cf1\b0\fs19\par
+\fs24 using\cf2  System;\par
+\cf1 namespace\cf2  Operators\par
+\{\par
+\par
+    \cf1 class\cf2  \cf3 Assignment\cf2\par
+    \{\par
+        \cf1 static\cf2  \cf1 void\cf2  Main(\cf1 string\cf2 [] args)\par
+        \{\par
+            \cf1 int\cf2  x = 15;\par
+            \par
+            x += 10;\par
+            Console.WriteLine(\cf4 "Add Assignment Operator: "\cf2  + x);\par
+\par
+\par
+\par
+            x = 20;\par
+         \f2\tab  \par
+\tab\tab  \f1 x -= 5;\par
+            Console.WriteLine(\cf4 "Subtract Assignment Operator: "\cf2  + x);\par
+\par
+\par
+\par
+            x = 15;\par
+           \par
+            x *= 5;\par
+            Console.WriteLine(\cf4 "Multiply Assignment Operator: "\cf2  + x);\par
+\par
+\par
+            x = 25;\par
+            \par
+            x /= 5;\par
+            Console.WriteLine(\cf4 "Division Assignment Operator: "\cf2  + x);\par
+\par
+\par
+\par
+            x = 25;\par
+            \par
+            x %= 5;\par
+            Console.WriteLine(\cf4 "Modulo Assignment Operator: "\cf2  + x);\par
+\par
+\par
+\par
+            x = 8;\par
+            \par
+            x <<= 2;\par
+            Console.WriteLine(\cf4 "Left Shift Assignment Operator: "\cf2  + x);\par
+\par
+\par
+\par
+\par
+\par
+            x = 8;\par
+            \par
+            x >>= 2;\par
+            Console.WriteLine(\cf4 "Right Shift Assignment Operator: "\cf2  + x);\par
+\par
+\par
+\par
+\par
+            x = 12;\par
+            \par
+            x &= 4;\par
+            Console.WriteLine(\cf4 "Bitwise AND Assignment Operator: "\cf2  + x);\par
+\par
+\par
+\par
+            x = 12;\par
+            \par
+            x ^= 4;\par
+            Console.WriteLine(\cf4 "Bitwise Exclusive OR Assignment Operator: "\cf2  + x);\par
+\par
+\par
+\par
+\par
+            x = 12;\par
+\par
+            x |= 4;\par
+            Console.WriteLine(\cf4 "Bitwise Inclusive OR Assignment Operator: "\cf2  + x);\par
+\par
+        \}\par
+    \}\par
+\}\par
+\par
+\fs19\par
+\b\f2\fs28 //Keywords\par
+\fs19\par
+\fs24 //Value Type\par
+\par
+\cf1\b0\f1 using\cf2  System;\par
+\par
+\cf1 class\cf2  \cf3 Keywords\cf2\par
+\{\par
+    \cf1 static\cf2  \cf1 public\cf2  \cf1 void\cf2  Main()\par
+    \{\par
+        \cf1 byte\cf2  a = 50;\par
+        Console.WriteLine(\cf4 "The value of a is: \{0\}"\cf2 , a);\par
+\par
+        \cf1 bool\cf2  b = \cf1 true\cf2 ;\par
+        Console.WriteLine(\cf4 "The value of b is: \{0\}"\cf2 , b);\par
+    \}\par
+\}\par
+\par
+\par
+\par
+\b\f2 //\f1 Modifiers Keywords\par
+\cf1\b0 using\cf2  System;\par
+\par
+\cf1 class\cf2  \cf3\f2 Modifier\cf2\f1\par
+\{\par
+\par
+    \cf1 class\cf2  \cf3 Mod\cf2\par
+    \{\par
+\par
+       \cf1 public\cf2  \cf1 int\cf2  n1;\par
+\par
+    \}\par
+    \cf1 static\cf2  \cf1 void\cf2  Main(\cf1 string\cf2 [] args)\par
+    \{\par
+\par
+        Mod obj1 = \cf1 new\cf2  Mod();\par
+\par
+        obj1.n1 = 70;\par
+\par
+        Console.WriteLine(\cf4 "Value of n1: \{0\}"\cf2 , obj1.n1);\par
+\par
+    \}\par
+\par
+\}\par
+\par
+\par
+\b\f2 //Statement Keyword\par
+\par
+\par
+\cf1\b0\f1 using\cf2  System;\par
+\par
+\cf1 class\cf2  \cf3 StatementKeyword\cf2\par
+\{\par
+    \cf1 public\cf2  \cf1 static\cf2  \cf1 void\cf2  Main()\par
+    \{\par
+\par
+        \cf1 for\cf2  (\cf1 int\cf2  i = 1; i < 3; i++)\par
+        \{\par
+\par
+\par
+            \cf1 if\cf2  (i == 2)\par
+                \cf1 continue\cf2 ;\par
+\par
+            Console.WriteLine(\cf4 "Statement Keyword Demo"\cf2 );\par
+        \}\par
+    \}\par
+\}\par
+\fs19\par
+\par
+\b\fs28\par
+\f2 //\f1 The conditional statements\par
+\f2\fs24 //if\par
+\par
+\cf1\b0\f1 using\cf2  System;\par
+\par
+\cf1 public\cf2  \cf1 class\cf2  \cf3 Conditional\cf2\par
+\{\par
+\par
+    \cf1 public\cf2  \cf1 static\cf2  \cf1 void\cf2  Main(\cf1 string\cf2 [] args)\par
+    \{\par
+        \cf1 string\cf2  name = \cf4 "ifcondition"\cf2 ;\par
+        \cf1 if\cf2  (name == \cf4 "ifcondition"\cf2 )\par
+        \{\par
+            Console.WriteLine(\cf4 "if condition statement"\cf2 );\par
+        \}\par
+    \}\par
+\}\par
+\par
+\par
+\b\f2 //if-else\par
+\par
+\cf1\b0\f1 using\cf2  System;\par
+\par
+\cf1 public\cf2  \cf1 class\cf2  \cf3\f2 Ifelse\cf2\f1\par
+\{\par
+\par
+    \cf1 public\cf2  \cf1 static\cf2  \cf1 void\cf2  Main(\cf1 string\cf2 [] args)\par
+    \{\par
+        \cf1 string\cf2  name = \cf4 "ifcondition"\cf2 ;\par
+        \cf1 if\cf2  (name == \cf4 "ifelsecondition"\cf2 )\par
+        \{\par
+            Console.WriteLine(\cf4 "if condition statement"\cf2 );\par
+        \}\par
+        \cf1 else\cf2\par
+        \{\par
+            Console.WriteLine(\cf4 "if-else condition statement"\cf2 );\par
+        \}\par
+    \}\par
+\}\par
+\par
+\par
+\par
+\b\f2 //Switch\par
+\par
+\cf1\b0\f1 using\cf2  System;\par
+\par
+\cf1 public\cf2  \cf1 class\cf2  \cf3\f2 Switchcase\cf2\f1\par
+\{\par
+    \cf1 public\cf2  \cf1 static\cf2  \cf1 void\cf2  Main(String[] args)\par
+    \{\par
+        \cf1 int\cf2  number = 50;\par
+        \cf1 switch\cf2  (number)\par
+        \{\par
+            \cf1 case\cf2  10:\par
+                Console.WriteLine(\cf4 "case 10"\cf2 );\par
+                \cf1 break\cf2 ;\par
+            \cf1 case\cf2  20:\par
+                Console.WriteLine(\cf4 "case 20"\cf2 );\par
+                \cf1 break\cf2 ;\par
+            \cf1 case\cf2  30:\par
+                Console.WriteLine(\cf4 "case 30"\cf2 );\par
+                \cf1 break\cf2 ;\par
+            \cf1 default\cf2 :\par
+                Console.WriteLine(\cf4 "No matches"\cf2 );\par
+                \cf1 break\cf2 ;\par
+        \}\par
+    \}\par
+\}\par
+\par
+\par
+\par
+\b\f2 //While loop\b0\par
+\par
+\cf1\f1 using\cf2  System;\par
+\par
+\cf1 class\cf2  \cf3 whileLoopDemo\cf2\par
+\{\par
+    \cf1 public\cf2  \cf1 static\cf2  \cf1 void\cf2  Main()\par
+    \{\par
+        \cf1 int\cf2  x = 1;\par
+\par
+        \cf1 while\cf2  (x <= 4)\par
+        \{\par
+            Console.WriteLine(\cf4 "This is a while loop"\cf2 );\par
+\par
+            x++;\par
+        \}\par
+    \}\par
+\}\b\par
+\b0\par
+\par
+\par
+\b\f2 //for loop\par
+\par
+\cf1\b0\f1 using\cf2  System;\par
+\par
+\cf1 class\cf2  \cf3 forLoopDemo\cf2\par
+\{\par
+    \cf1 public\cf2  \cf1 static\cf2  \cf1 void\cf2  Main()\par
+    \{\par
+        \cf1 for\cf2  (\cf1 int\cf2  x = 1; x <= 4; x++)\par
+            Console.WriteLine(\cf4 "This is a for loop"\cf2 );\par
+    \}\par
+\}\par
+\par
+\fs19\par
+\b\f2\fs28 //Inheritence\par
+\fs19\par
+\fs24 //Single Inheritence\par
+\par
+\cf1\b0\f1 using\cf2  System;\par
+\cf1 namespace\cf2  Singleinheritence\par
+\{\par
+    \cf1 public\cf2  \cf1 class\cf2  \cf3 Parent\cf2\par
+    \{\par
+        \cf1 public\cf2  \cf1 void\cf2  DisplayParentsAB()\par
+        \{\par
+            Console.WriteLine(\cf4 "A and B are my parents"\cf2 );\par
+        \}\par
+    \}\par
+\par
+    \cf1 public\cf2  \cf1 class\cf2  \cf3 Son\cf2  : Parent\par
+    \{\par
+        \cf1 public\cf2  \cf1 void\cf2  DisplaySonC()\par
+        \{\par
+            Console.WriteLine(\cf4 "I am the son C"\cf2 );\par
+        \}\par
+    \}\par
+    \cf1 public\cf2  \cf1 class\cf2  \cf3 Program\cf2\par
+    \{\par
+        \cf1 public\cf2  \cf1 static\cf2  \cf1 void\cf2  Main(\cf1 string\cf2 [] args)\par
+        \{\par
+            Son s = \cf1 new\cf2  Son();\par
+            s.DisplaySonC();\par
+            s.DisplayParentsAB();\par
+        \}\par
+    \}\par
+\}\par
+\par
+\par
+\par
+\b\f2 //Hierarchical\par
+\par
+\cf1\b0\f1 using\cf2  System;\par
+\cf1 namespace\cf2  Hierarchical\par
+\{\par
+    \cf1 public\cf2  \cf1 class\cf2  \cf3 Parent\cf2\par
+    \{\par
+        \cf1 public\cf2  \cf1 void\cf2  DisplayParentsAB()\par
+        \{\par
+            Console.WriteLine(\cf4 "A and B are my parents"\cf2 );\par
+        \}\par
+    \}\par
+\par
+    \cf1 public\cf2  \cf1 class\cf2  \cf3 ChildC\cf2  : Parent\par
+    \{\par
+        \cf1 public\cf2  \cf1 void\cf2  DisplayChildC()\par
+        \{\par
+            Console.WriteLine(\cf4 "I am the child C"\cf2 );\par
+        \}\par
+    \}\par
+\par
+    \cf1 public\cf2  \cf1 class\cf2  \cf3 ChildD\cf2  : Parent\par
+    \{\par
+        \cf1 public\cf2  \cf1 void\cf2  DisplayChildD()\par
+        \{\par
+            Console.WriteLine(\cf4 "I am the child D"\cf2 );\par
+        \}\par
+    \}\par
+\par
+    \cf1 public\cf2  \cf1 class\cf2  \cf3 Program\cf2\par
+    \{\par
+        \cf1 public\cf2  \cf1 static\cf2  \cf1 void\cf2  Main(\cf1 string\cf2 [] args)\par
+        \{\par
+            ChildC cc = \cf1 new\cf2  ChildC();\par
+            ChildD cd = \cf1 new\cf2  ChildD();\par
+\par
+            cc.DisplayChildC();\par
+            cc.DisplayParentsAB();  \par
+\par
+            cd.DisplayChildD();\par
+            cd.DisplayParentsAB();  \par
+        \}\par
+    \}\par
+\}\par
+\par
+\par
+\par
+\b\f2 //Multilevel Inheritence\b0\par
+\par
+\cf1\f1 using\cf2  System;\par
+\cf1 namespace\cf2  Multilevel\par
+\{\par
+    \cf1 public\cf2  \cf1 class\cf2  \cf3 Grandparent\cf2\par
+    \{\par
+        \cf1 public\cf2  \cf3 Grandparent\cf2 ()\par
+        \{\par
+            Console.WriteLine(\cf4 "MultileveliInheritence "\cf2 );\par
+        \}\par
+        \cf1 public\cf2  \cf1 void\cf2  DisplayGrandParentsAB()\par
+        \{\par
+            Console.WriteLine(\cf4 "A and B are my grandparents"\cf2 );\par
+        \}\par
+    \}\par
+\par
+    \cf1 public\cf2  \cf1 class\cf2  \cf3 Parents\cf2  : Grandparent\par
+    \{\par
+        \cf1 public\cf2  \cf1 void\cf2  DisplayParentsCD()\par
+        \{\par
+            Console.WriteLine(\cf4 "C and D are my parents"\cf2 );\par
+        \}\par
+    \}\par
+\par
+    \cf1 public\cf2  \cf1 class\cf2  \cf3 Child\cf2  : Parents\par
+    \{\par
+        \cf1 public\cf2  \cf1 void\cf2  DisplayChildZ()\par
+        \{\par
+            Console.WriteLine(\cf4 "I am the child Z"\cf2 );\par
+        \}\par
+    \}\par
+\par
+    \cf1 public\cf2  \cf1 class\cf2  \cf3 Program\cf2\par
+    \{\par
+        \cf1 public\cf2  \cf1 static\cf2  \cf1 void\cf2  Main(\cf1 string\cf2 [] args)\par
+        \{\par
+           Child cd = \cf1 new\cf2  Child();\par
+            cd.DisplayChildZ();\par
+            cd.DisplayParentsCD();\par
+            cd.DisplayGrandParentsAB();\par
+        \}\par
+    \}\par
+\}\b\par
+\b0\par
+\par
+ \par
+\f2\lang9\par
+\cf0\f0\par
+}
+ 
